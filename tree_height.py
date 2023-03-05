@@ -3,17 +3,17 @@
 import readline
 import sys
 import threading
-import numpy  
+import numpy as cc  
 def compute_height(n, parent):
-    garums = numpy.zeros(n)
+    garums = cc.zeros(n)
 
     maxgar = -1
     for j in range (len(parent)):
         z = j
         limeni = 1
         while parent[z] != -1:
-            if limeni[z] !=0:
-                limeni += limeni[z]-1
+            if parent[z] !=0:
+                limeni += limeni[parent[z]]-1
                 return
             
             limeni +=1
@@ -40,9 +40,13 @@ def main():
                 with open(file) as jaunsf:
             c = int(jaunsf.readline())
             parent = list(map(int, jaunsf.readline().split()))
-           
+           except FileNotFoundError:
+            print("fails nav atrasts")
+            return
+        else:
+            parent = []
     elif "I" in text:
-        n = input()
+        n = int(input())
         parent = list(map(int,input().split()))
 
     
@@ -56,5 +60,6 @@ def main():
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-main()
-# print(numpy.array([1,2,3]))
+if_name == "__main()__":
+    main()
+

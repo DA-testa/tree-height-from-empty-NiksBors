@@ -32,10 +32,11 @@ def compute_height(n, parent):
 def main():
     text = input("Ievadat:")
     if "F" in text:
-        fileName = input()
-        file='./test/' + fileName
+        fileName = str(input())
+        
         if "a" not in fileName:
             try:
+                file='./test/' + fileName
                 with open(file,'r') as jaunsf:
                     c = int(jaunsf.readline())
                     parent = list(map(int, jaunsf.readline().split()))

@@ -22,9 +22,12 @@ def compute_height(n, parent):
 
 def main():
    
-    text = input("Ievadat:")
+    text = input("Ievadat: ")
     if "I" in text:
-        n = int(input().strip())
+        try:
+            n = int(input().strip())
+        except ValueError:
+            return
         parent = cc.array(list(map(int,input().split())))
     elif "F" in text:
         fileName = str(input())

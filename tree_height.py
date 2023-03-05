@@ -5,7 +5,7 @@ import sys
 import threading
 import numpy as cc  
 def compute_height(n, parent):
-    limeni{}
+    limeni = {}
     maxgar = 0
     for j in range(n):
         garums = 0

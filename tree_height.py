@@ -35,7 +35,7 @@ def main():
         file='./test/' + fileName
         if "a" not in fileName:
             try:
-                with open(file) as jaunsf:
+                with open(file,'r') as jaunsf:
                     c = int(jaunsf.readline())
                     parent = list(map(int, jaunsf.readline().split()))
             except FileNotFoundError:

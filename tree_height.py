@@ -49,6 +49,7 @@ def main():
     elif "I" in text:
         n = int(input())
         parent = list(map(int,input().split()))
+    print(compute_height(n, parent))
 
     
     

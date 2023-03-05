@@ -19,24 +19,12 @@ def compute_height(n, parent):
     return cc.max(garums)
     
         
-            
-    
-
-    
-    
-
-  
-
-
-
-   
-  
 
 def main():
-    n=0
+   
     text = input("Ievadat:")
     if "I" in text:
-        n=int(input())
+        n=int(input().strip())
         parent = cc.array(list(map(int,input().split())))
     elif "F" in text:
         fileName = str(input())

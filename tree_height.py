@@ -12,15 +12,13 @@ def compute_height(n, parent):
         z = j
         limeni = 1
         while parent[z] != -1:
-            if parent[z] !=0:
-                limeni += limeni[parent[z]]-1
-                return
+        
             
             limeni +=1
             z=parent[z]
-            limeni[j] = limeni
-            maxgar = max(maxgar, limeni[j])
-        return maxgar
+            garums[j] = limeni
+            maxgar = max(maxgar, garums[j])
+     return maxgar
     
 
   

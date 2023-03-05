@@ -6,13 +6,14 @@ import threading
 import numpy as cc  
 def compute_height(n, parent):
     garums = cc.zeros(n, dtype=int)
-        if garums[mezgls]==0:
+    for mezgls in range(n):
+        if garums[mezgls] == 0:
             stack = [(mezgls,0)]
             while stack:
                 mezgls, limeni = stack.pop()
                 garums[mezgls]=limeni
-        for b in cc.where(parent == mezgls)[0]:
-            stack.append((b, limeni+1))
+                for b in cc.where(parent == mezgls)[0]:
+                    stack.append((b, limeni+1))
     
         
             

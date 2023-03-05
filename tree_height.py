@@ -25,12 +25,7 @@ def compute_height(n, parent):
 
 
    
-   #l = compute_height.parent
-   #while l:
-        #max_height +=1
-        #l=l.parent
-     #Your code here
-    #return max_height
+  t
 
 def main():
     text = input("Ievadat:")
@@ -39,7 +34,7 @@ def main():
         
         if ".a" in fileName:
             return
-        if "a" not in fileName:
+        if ".a" not in fileName:
             jaunsf = "test/"+fileName
             with open(jaunsf, 'o') as jap:
                 n = int(jap,readline())

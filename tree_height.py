@@ -24,18 +24,17 @@ def main():
    
     text = input("Ievadat: ")
     if "I" in text:
-        try:
-            n = int(input().strip())
-        except ValueError:
-            return
+         n = int(input().strip())
+    
         parent = cc.array(list(map(int,input().split())))
     elif "F" in text:
         fileName = str(input())
-        if "a" not in fileName:
+        if "a" in fileName:
+            print("fails satur a")
             try:
-                file='./test/' + fileName
+                file="test/" + str(fileName)
                 with open(file,'r') as jaunsf:
-                    c = int(jaunsf.readline())
+                    n = int(jaunsf.readline())
                     parent =cc.array(list(map(int, jaunsf.readline().split())))
             except FileNotFoundError:
                 print("fails nav atrasts")

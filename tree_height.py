@@ -49,8 +49,8 @@ def main():
             print("error")
             return
     
-       
-    print(compute_height(n, parent))
+    atrisinajums = compute_height(n,parent)
+    print(atrisinajums)
 
     
     

@@ -40,7 +40,7 @@ def main():
         try:
             fileName="test/" + str(fileName)
             with open(fileName,'r', encoding="utf8") as jaunsf:
-                 n = int(jaunsf.readline())
+                 n = int(jaunsf.readline().strip())
                  parent =cc.array(list(map(int, jaunsf.readline().split())))
         except FileNotFoundError:
             print("fails nav atrasts")

@@ -5,25 +5,29 @@ import sys
 import threading
 import numpy as cc  
 def compute_height(n, parent):
-    stack=[]
-    garumi = cc.zeros(n, dtype=int)
+    limeni{}
+    maxgar = 0
     for j in range(n):
-        if garumi[j]!=0:
-            continue
-        
+        garums = 0
         z=j
-        while j!=-1 and garumi[z] ==0:
-            stack.append(z)
+        while z!=-1:
+            if z in limeni:
+                garums += limeni[z]
+                break
+            garums +=1
+             
+            z=parent[z]
+        z = j
+        while z != -1:
+            if z in limeni:
+                garums += limeni[z]
+                break
+            limeni[z] = garums
+            garums -=1
             z = parent[z]
-        garums=0
-        while stack:
-            mezgls = stack.pop()
-            garums+=1
-            garumi[mezgls] = garums
-        if z!=-1:
-            garums+=garumi[z]
-        garumi[j] = garums
-    return cc.max(garumi)
+        maxgar = max(maxgar, limeni[j])
+    return maxgar
+
         
 
 def main():

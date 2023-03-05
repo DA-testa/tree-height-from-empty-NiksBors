@@ -31,9 +31,11 @@ def compute_height(n, parent):
 
 def main():
     text = input("Ievadat:")
-    if "F" in text:
+    if "I" in text:
+        n=int(input())
+        parent = list(map(int,input().split()))
+    elif "F" in text:
         fileName = str(input())
-        
         if "a" not in fileName:
             try:
                 file='./test/' + fileName
@@ -46,9 +48,8 @@ def main():
         else:
             print("error")
             return
-    elif "I" in text:
-        n = int(input())
-        parent = list(map(int,input().split()))
+    
+       
     print(compute_height(n, parent))
 
     

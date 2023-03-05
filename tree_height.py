@@ -33,6 +33,7 @@ def compute_height(n, parent):
   
 
 def main():
+    n=0
     text = input("Ievadat:")
     if "I" in text:
         n=int(input())

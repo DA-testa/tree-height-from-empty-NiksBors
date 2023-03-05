@@ -34,18 +34,16 @@ def main():
     text = input("Ievadat:")
     if "F" in text:
         fileName = input()
-        
-        if ".a" in fileName:
-            return
-        if ".a" not in fileName:
-            jaunsf = "test/"+fileName
-            with open(jaunsf, 'o') as jap:
-                n = int(jap,readline())
-            tree = compute_height(n,parent)
-            print(tree)
+        file='/test/'+fileName
+        if "a" not in fileName:°
+            try:
+                with open(file) as jaunsf:
+            c = int(jaunsf.readline())
+            parent = list(map(int, jaunsf.readline().split()))
+           
     elif "I" in text:
         n = input()
-        parent = list(map(input().split()))
+        parent = list(map(int,input().split()))
 
     
     

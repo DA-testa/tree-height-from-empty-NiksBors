@@ -42,7 +42,8 @@ def main():
                 print("fails nav atrasts")
                 return
         else:
-            parent = []
+            print("error")
+            return
     elif "I" in text:
         n = int(input())
         parent = list(map(int,input().split()))

@@ -8,7 +8,7 @@ def compute_height(n, parent):
     garums = cc.zeros(n, dtype=int)
     def papildfunk(mezgls):
         stack = [(mezgls,0)]
-         while stack:
+        while stack:
             mezgls, limeni = stack.pop()
             garums[mezgls]=limeni
             for b in cc.where(parent == mezgls)[0]:

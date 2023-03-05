@@ -32,8 +32,8 @@ def main():
         if "a" in fileName:
             print("fails satur a")
         try:
-            file="test/" + str(fileName)
-            with open(file,'r') as jaunsf:
+            fileName="test/" + str(fileName)
+            with open(fileName,'r') as jaunsf:
                  n = int(jaunsf.readline())
                  parent =cc.array(list(map(int, jaunsf.readline().split())))
         except FileNotFoundError:

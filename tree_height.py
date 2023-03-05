@@ -32,15 +32,15 @@ def main():
     text = input("Ievadat:")
     if "F" in text:
         fileName = input()
-        file='/test/'+fileName
+        file='./test/' + fileName
         if "a" not in fileName:
             try:
                 with open(file) as jaunsf:
-            c = int(jaunsf.readline())
-            parent = list(map(int, jaunsf.readline().split()))
-           except FileNotFoundError:
-            print("fails nav atrasts")
-            return
+                    c = int(jaunsf.readline())
+                    parent = list(map(int, jaunsf.readline().split()))
+            except FileNotFoundError:
+                print("fails nav atrasts")
+                return
         else:
             parent = []
     elif "I" in text:

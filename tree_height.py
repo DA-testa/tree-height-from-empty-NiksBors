@@ -7,7 +7,7 @@ import numpy as cc
 def compute_height(n, parent):
     stack=[]
     garumi = cc.zeros(n, dtype=int)
-    for j in range(n)
+    for j in range(n):
         if garumi[j]!=0:
             continue
         

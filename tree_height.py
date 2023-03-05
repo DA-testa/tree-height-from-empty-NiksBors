@@ -1,28 +1,59 @@
 # python3
 
+import readline
 import sys
 import threading
-import numpy
+import numpy  
+def compute_height(n, parent):
+    adj_list = [[]for _ in range(n)]
+    for j, v in enumerate(parents):
 
+        if  v!=-1:
+            adj_list[v].append(i)
+    
+    stack =[(parents.index(-1),1)]
+    max_height =0
+    while stack:
+        l, garums = stack.pop()
+        max_height = max(max_height, garums)
+        for q in adj_list[v]:
+            stack.append((q height +1))
+    
 
-def compute_height(n, parents):
-    # Write this function
-    max_height = 0
-    # Your code here
     return max_height
 
 
-def main():
-    # implement input form keyboard and from files
-    
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
-    
-    # input number of elements
-    # input values in one variable, separate with space, split these values in an array
-    # call the function and output it's result
-    pass
 
+   
+   #l = compute_height.parent
+   #while l:
+        #max_height +=1
+        #l=l.parent
+     #Your code here
+    #return max_height
+
+def main():
+    text = input("Ievadat:")
+    if "F" in text:
+        fileName = input()
+        
+        if ".a" in fileName:
+            return
+        if "a" not in fileName:
+            jaunsf = "test/"+fileName
+            with open(jaunsf, 'o') as jap:
+                n = int(jap,readline())
+            tree = compute_height(n,parent)
+            print(tree)
+    elif "I" in text:
+        n = input()
+        parent = list(map(input().split()))
+
+    
+    
+    
+    
+    
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
 # of bigger stack, we have to launch the computation in a new thread.

@@ -34,8 +34,8 @@ def main():
     text = input("Ievadat:")
     if "F" in text:
         fileName = input()
-        file='/test/'+fileName
-        if "a" not in fileName:°
+        file='./test/'+fileName
+        if "a" not in fileName:
             try:
                 with open(file) as jaunsf:
             c = int(jaunsf.readline())

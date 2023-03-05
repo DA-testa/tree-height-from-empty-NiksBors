@@ -6,7 +6,7 @@ import threading
 import numpy as cc  
 def compute_height(n, parent):
     garums = cc.zeros(n, dtype=int)
-    def papildfunk(mezgls)
+    def papildfunk(mezgls):
         stack = [(mezgls,0)]
          while stack:
             mezgls, limeni = stack.pop()
@@ -36,7 +36,7 @@ def main():
     text = input("Ievadat:")
     if "I" in text:
         n=int(input())
-        parent = list(map(int,input().split()))
+        parent = cc.array(list(map(int,input().split())))
     elif "F" in text:
         fileName = str(input())
         if "a" not in fileName:
@@ -44,7 +44,7 @@ def main():
                 file='./test/' + fileName
                 with open(file,'r') as jaunsf:
                     c = int(jaunsf.readline())
-                    parent = list(map(int, jaunsf.readline().split()))
+                    parent =cc.array(list(map(int, jaunsf.readline().split())))
             except FileNotFoundError:
                 print("fails nav atrasts")
                 return

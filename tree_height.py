@@ -33,7 +33,7 @@ def main():
             print("fails satur a")
         try:
             fileName="test/" + str(fileName)
-            with open(fileName,'r') as jaunsf:
+            with open(fileName,'r', encoding="utf8") as jaunsf:
                  n = int(jaunsf.readline())
                  parent =cc.array(list(map(int, jaunsf.readline().split())))
         except FileNotFoundError:
